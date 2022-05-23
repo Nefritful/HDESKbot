@@ -1,0 +1,30 @@
+import logging
+
+
+botName = 'Telegram_Bot_Name'
+curl = ""
+
+TOKEN = "Bot Token"
+TOKENnotice = ""
+
+MAX_FILE_SIZE = 1*1024*1024
+bot = None
+userHistory = None
+userMessage = None
+userBotActions = None
+operator = 0
+Dev_Log = 0
+server = '127.0.0.1:80'
+servLog = 'Username'
+servPass = 'Password'
+
+log_level = logging.DEBUG
+
+crontab = [
+    {'url': 'messages/calendar', 'interval': 0, 'start_time': '07:00'},
+    {'url': 'check_deadline_messege', 'interval': 45, 'start_time': None},
+    {'url': 'check_deadline_messege/all_check_messeges', 'interval': 0, 'start_time': '09:00'},
+    {'url': 'reports/hours_per_day', 'interval': 0, 'start_time': '22:30'},
+    {'url': 'check_deadline_messege/check_new_message', 'interval': 15, 'start_time': None},
+    {'url': 'messages/fault_revision', 'interval': 15, 'start_time': None},
+]
